@@ -37,6 +37,9 @@ hbs.registerHelper('getCurrentYear',()=>{
 hbs.registerHelper(('ScreamIt'),(text)=>{
   return text.toUpperCase();
 });
+app.get('/Projects',(req,res)=>{
+  res.render('projects.hbs')
+})
 app.get('/',(req,res)=>{
   console.log("inside get");
   res.render('home.hbs',{
