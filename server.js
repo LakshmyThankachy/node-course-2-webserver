@@ -1,6 +1,7 @@
 const express=require('express');
 const hbs=require('hbs');
 const fs=require('fs');
+const port=process.env.PORT || 3000;
 var app=express();
 console.log(__dirname + '/public')
 
@@ -56,6 +57,6 @@ app.get('/bad',(req,res) =>{
     errorMessage:'Unable to load the page'
   })
 });
-app.listen(3000,()=>{
-  console.log("Server is up on Port 3000");
+app.listen(port,()=>{
+  console.log(`Server is up on Port ${port}`);
 });
