@@ -38,7 +38,9 @@ hbs.registerHelper(('ScreamIt'),(text)=>{
   return text.toUpperCase();
 });
 app.get('/Projects',(req,res)=>{
-  res.render('projects.hbs')
+  res.render('projects.hbs'),{
+    pageTitle:'Projects'
+  }
 })
 app.get('/',(req,res)=>{
   console.log("inside get");
